@@ -27,14 +27,9 @@ body {
 
 /* HEADER */
 header {
-   background-color: #1e1e1e;
-   padding: 15px 0;
-   position: sticky;
-   top: 0;
-   width: 100%;
-   z-index: 1000;
-   border-bottom: 2px solid var(--primary-color);
+   transition: transform 0.3s ease-in-out;
 }
+
 
 #header {
    display: flex;
@@ -95,6 +90,11 @@ h1 {
    color: var(--primary-color);
    font-size: 2rem;
    text-transform: uppercase;
+}
+
+/* Ajuste para evitar que el header tape el contenido */
+main {
+   padding-top: 0px; /* Ajusta este valor según la altura del header */
 }
 
 /* ANIMACIONES */
@@ -166,4 +166,19 @@ footer {
    padding: 20px;
    margin-top: 50px;
    border-top: 2px solid var(--primary-color);
+}
+.btn {
+   display: inline-block;
+   padding: 10px 20px;
+   background-color: var(--primary-color);
+   color: white;
+   text-decoration: none;
+   font-weight: bold;
+   border-radius: 5px;
+   transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn:hover {
+   background-color: var(--secondary-color);
+   transform: scale(1.1);
 }
