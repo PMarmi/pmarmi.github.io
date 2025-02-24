@@ -29,4 +29,20 @@ document.addEventListener("DOMContentLoaded", function () {
          button.style.boxShadow = "none";
       });
    });
+
+   // 3️⃣ Mostrar botón "Ir arriba" en scroll
+   const scrollBtn = document.createElement("a");
+   scrollBtn.href = "#top";
+   scrollBtn.id = "scrollToTop";
+   scrollBtn.className = "scroll-top-btn";
+   scrollBtn.textContent = "↑";
+   document.body.appendChild(scrollBtn);
+
+   window.addEventListener("scroll", function () {
+       if (window.scrollY > 200) {
+           scrollBtn.style.display = "block";
+       } else {
+           scrollBtn.style.display = "none";
+       }
+   });
 });

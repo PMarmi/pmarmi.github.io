@@ -17,6 +17,42 @@ body {
    padding: 0;
    min-height: 100vh;
 }
+.scroll-top-btn {
+   position: fixed;
+   bottom: 20px;
+   right: 20px;
+   width: 50px;
+   height: 50px;
+   background-color: var(--primary-color);
+   color: white;
+   font-size: 24px;
+   font-weight: bold;
+   text-align: center;
+   line-height: 50px;
+   border-radius: 50%;
+   text-decoration: none;
+   display: none; /* Oculto por defecto */
+   transition: background-color 0.3s ease, transform 0.2s ease;
+   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.scroll-top-btn:hover {
+   background-color: var(--secondary-color);
+   transform: scale(1.1);
+}
+
+/* Responsive: Ajuste para pantallas pequeñas */
+@media screen and (max-width: 600px) {
+   .scroll-top-btn {
+       width: 40px;
+       height: 40px;
+       font-size: 20px;
+       line-height: 40px;
+       bottom: 15px;
+       right: 15px;
+   }
+}
+
 #skills ul {
    text-align: center;
    list-style: none;
@@ -45,6 +81,13 @@ header {
    justify-content: space-between;
    align-items: center;
 }
+
+.header-logo {
+    height: 100px; /* Ajusta según el tamaño del header */
+    width: auto; /* Mantiene la proporción */
+    max-width: 100%; /* Para que no se desborde */
+}
+
 
 #menu-toggle {
    display: none;
